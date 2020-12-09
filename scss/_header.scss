@@ -1,0 +1,81 @@
+
+header {
+    height: 170px;
+    width: 100%;
+}
+
+
+.header__logo {
+    width: 5vw;
+    margin-top: 20px;
+    float: left;
+}
+
+.nav__menu {
+    width: 50vw;
+    float: left;
+    margin-top: 50px;
+    font-family: 'PT Serif', serif;
+    li {
+    display: inline;
+    padding: 20px;
+    font-family: 'Passion One', cursive;
+    }
+}
+
+ul ul {
+    position: absolute;
+    display: none;
+    li {
+       display: block;
+    }
+}
+
+ul li:hover ul {
+    display: block;
+}
+
+
+#submenu {
+    width: 10%;
+    margin-left: 55px;
+    font-family: 'PT Serif', serif;
+}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+    color:#968d8d;
+    font-size: 1.5em;
+}
+
+
+.btn {
+	float: right; 
+	background-color: #03fc07;
+	padding: 1em 2em;
+	margin-top: 20px;
+	font-family: 'Passion One', cursive;
+	border-radius: 10px;
+	font-weight: 400;
+	color: white; 
+    transition: background-color 0.5s;
+    &:hover {
+        background-color: #a3ffa5;
+    }
+}
+
+.social {
+    width:50px;
+    position:fixed;
+    right:0;
+    top:10%;
+    transition: width 0.5s;
+    &:hover {
+        width:70px;
+    }
+}
+ 
+.social li {
+	margin-right: 10px;
+	display: inline-block;
+}
