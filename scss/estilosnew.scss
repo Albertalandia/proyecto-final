@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Passion+One:wght@400;700;900&display=swap');
+@import 'scss/_header';
+@import 'scss/_galeria';
+
+/* Variables */
+$linda: 'Passion One', cursive;
+$lima: #03fc07;
+$letragris: #968d8d;
+$fondo: barba;
+$fondoform: celeste;
+$ancho: 100%;
+
+
+/*GENERAL*/
+
+@each $diubjo in colo, ovni, china {
+    .#{$diubjo} { 
+          Background-image:  
+           url('../images/#{$diubjo}.jpg');
+           background-repeat: no-repeat;
+           height: 500px;
+           margin: 0 auto;
+     }
+ } 
+
+ #paginasDibujos {
+     margin-left: 40%;
+     @extend .efectoLoco;
+ }
+
+
+.container {
+	margin: 0 5vw ;
+}
+
+h1 {
+	color: $lima;
+	font-family: $linda;
+	font-size: 18em;
+	margin: 0 auto;
+	line-height: 142pt;
+	letter-spacing: 10px;
+}
+
+h2 {
+    font-family: 'PT Serif', serif;
+    font-size: 40px;
+    color:$letragris;
+}
+
+p { 
+    font-family: 'PT Serif', serif;
+    color: $letragris;
+    padding: 10px;
+}
+
+ol {
+    font-family: 'PT Serif', serif;
+    color: $letragris;
+}
+
+.efectoLoco {
+    animation-name: efecto_loco;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+    animation-delay: 0s;
+}
+
+@keyframes efecto_loco {
+   0%{ font-size: 18em; }
+   25%{ font-size: 18.5em; }
+   50%{ font-size: 19em;
+     color: lightpink; }
+   75%{ font-size: 18.5em;}
+   100%{ font-size: 18em;
+     color:tomato;}
+}
+
+.titulos-mobile {
+    display: none;
+}
+
+.contacto-mobile {
+    display: none;
+}
+
+.footer {
+    text-align: right;
+    font-family: 'PT Serif', serif;
+    width: 100%;
+    height: 20px;
+    background-color: $lima;
+}
+
+.titus {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    position: relative;
+}
+
+/* HOME */
+
+#homeBody {
+    margin: 0;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../images/home.jpg");
+    }
+
+#grisHome {
+    font-family: 'PT Serif', serif;
+    margin-top: 387px;
+    margin-left: -813px;
+}
+
+/*ANECDOTARIO*/
+
+#anecdotarioBody {
+    margin: 0;
+    height: 100vh;
+}
+
+#grilla {
+    display: grid;
+    grid-template-areas: 
+    "imagen1 anecdota1"
+    "anecdota2 imagen2"
+    "imagen3 anecdota3";
+    grid-template-columns: 1fr 1fr;
+    Justify-items: center;
+    align-items:top;
+    padding: 10px;
+    font-family: 'PT Serif', serif;
+}
+
+div#imagen1 {
+    grid-area: imagen1;
+    margin-top: 20px;
+}
+
+div#imagen2 {
+    grid-area: imagen2;
+    margin-top: 20px;
+}
+
+div#imagen3 {
+    grid-area: imagen3;
+    margin-top: 20px;
+}
+
+div#anecdota1 {
+    grid-area: anecdota1;
+    padding: 5px;
+}
+
+div#anecdota2 {
+    grid-area: anecdota2;
+    padding: 5px;
+}
+
+div#anecdota3 {
+    grid-template-areas: anecdota3;
+    padding: 5px;
+}
+
+/*ABOUT*/
+
+#aboutBody {
+    margin: 0;
+    background-image: url("../images/about.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#grisAbout {
+    margin-top: 187px;
+    margin-left: -476px;
+}
+
+#aboutParrafo {
+    width: 65%;
+    margin-top: 10px;
+}
+
+/*CONTACTO*/
+
+#contactoBody {
+    margin: 0;
+    background-image: url("../images/contacto.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+form {
+	font-family: 'PT Serif', serif;
+    font-size: 20px;
+    margin-top: 30PX;
+    width: $ancho/2;
+    @if $fondoform == rosa {
+        background-color: pink;
+         background-color: palegoldenrod;
+ } @else if $fondoform == verde {
+         background-color: lime;
+ } @else if $fondoform == celeste {
+         background-color: mediumturquoise;
+ } @else {
+         background-color: palegoldenrod;
+ }
+
+}
+
+fieldset{
+	border: none;
+}
+
+#tituloForm{
+	color: white;
+	font-size: 30px;
+	text-decoration: blink;
+	font-weight: bold;
+}
+
+@media screen and (max-width: 320px) {
+    header {
+        height: 170px;
+        width: 100%;
+    }
+
+
+    .header__logo {
+        width: 20%;
+        padding-right: 15%;
+        margin-top: 20px;
+        float: left;
+    }
+
+    .nav__menu {
+        width: 50vw;
+        float: left;
+        margin-top: 30px;
+        font-family: 'PT Serif', serif;
+        font-size: 20px;
+    }
+
+    .menu li {
+        padding: 5px;
+        font-family: $linda;
+    }
+
+    ul ul {
+        position: absolute;
+        display: none;
+    }
+
+    ul ul li {
+
+        display: block;
+    }
+
+    ul li:hover ul {
+        display: block;
+    }
+
+    #submenu {
+        width: 10%;
+        margin-left: 55px;
+        font-family: 'PT Serif', serif;
+    }
+
+    a:link, a:visited, a:active {
+        text-decoration:none;
+        color: #424242;
+        font-size: 1.5em;
+    }
+
+    .contacto-mobile {
+        display: block;
+    }
+
+    .btn {
+        display: none;
+    }
+
+    .main__titulos {
+        width: 100%;
+        font-size: 3.5em;
+        line-height: 0.8;
+    }
+
+    #homeBody {
+        margin: 0;
+        background-image: url("../images/home-mobile.jpg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        height: 568px;;        
+    }
+    h2 {
+        font-family: 'PT Serif', serif;
+        font-size: 20px;
+        width: 60%;
+        float: right;
+        text-align: right;
+        color: #424242;
+    }
+    .footer {
+        display: none;
+
+    }
+}
+
+
+

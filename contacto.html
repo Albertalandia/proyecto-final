@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/main.css"/>
+	<title>ALBERTALANDIA - Contacto</title>
+	<meta name="description" content="Contacta a Daniela Albert">
+	<meta name="keywords" content="ilustración, pintura, dibujos, oleo, marcadores, arte, contacto">
+</head>
+<body id="contactoBody">
+	<div class="container">
+		<header>
+			<ul class="social">
+				<li> <a href="https://www.facebook.com/Daniela.Albert.Pinturas" target="blank"><img src="images/fb.png" alt="Facebook"/></a></li>
+				<li> <a href="https://www.instagram.com/albertalandia" target="blank"><img src="images/ig.png" alt="instagram"/></a></li>
+				<li> <a href="https://www.twitter.com" target="blank"><img src="images/tw.png" alt="twitter"/></a></li>
+			</ul>
+	<!-- menu -->
+		<nav id="nav">
+			<a href="index.html"><img class="header__logo" src="images/logo.svg" alt="logo"/></a>
+			<ul class="nav__menu">
+				<li><a href="index.html">HOME</a></li>
+				<li><a href="galeria.html">GALERIA</a>
+					<ul id="submenu">
+						<li><a href="galeria.html#analogico">Análogico</a></li>
+						<li><a href="galeria.html#digital">Digital</a></li>
+					</ul>
+				</li>
+				<li><a href="anecdotario.html">ANECDOTARIO</a></li>
+				<li><a href="about.html">SOBRE MI</a></li>
+			</ul>
+			<div class="btn"><a href="contacto.html">CONTACTO</a></div>
+		</nav>
+       </header>
+	<!-- contenido principal -->
+		<main>
+			<h1 class="titulos">CONTACTO</h1>
+			<form>
+	            <fieldset>
+	                <div id=tituloForm>ESCRIBIME</div> 
+		                <div>
+		                    <label for="nombre">Nombre:</label>    
+		                    <input type="text" name="nombre" placeholder="Escribí tu nombre" />
+		                </div>
+		                <div>
+		                    <label for="apellido">Apellido:</label>    
+		                    <input type="text" name="apellido" placeholder="Escribí tu apellido" />
+		                </div>
+		                 <div>
+		                    <label for="email">E-mail:</label>    
+		                    <input type="text" name="email" placeholder="Escribí tu E-mail" />
+		                </div>
+		                <div>
+		                    <label for="region">Región</label> 
+		                      	<select name="region">
+			                        <option value="capital">Capital</option>
+			                        <option value="buenosaires">Provincia de Buenos Aires</option>
+			                        <option value="fuera">Fuera de Buenos Aires</option>
+		                      	</select>
+		                </div>
+		                <div>
+		                    <label for="newsletter">¿Querés recibir mi newsletter?</label>
+		                    <label for="si">Si</label>   
+		                    <input type="radio" name="newsletter" value="Sí"/>
+		                    <label for="no">No</label>   
+		                    <input type="radio" name="newsletter" value="No"/>
+		                </div>	               
+						<!-- 	            
+						<div>
+		                    <label for="mensaje">Mensaje:</label>    
+		                    <input type="text" name="mensaje" placeholder="Escribí tu mensaje"/>
+		                </div> 
+		            	-->
+		                <div>
+		                	<label for="mensaje">Mensaje:</label>    	                    
+		                	<textarea type="text" name="mensaje" placeholder="Escribí tu mensaje"/></textarea>
+		                </div>
+		                <div>
+		                    <div>Acepta politica de privacidad</div>
+		                    <input type="checkbox" name="privacidad" value="1" />
+		                </div>
+		                <div>
+		                    <div>Acepta uso de cookies</div>
+		                    <input type="checkbox" name="cookies" value="1" />
+		                </div>
+				            <input type="submit" value="Enviar formulario"/>
+				            <input type="reset" value="Limpiar formulario"/>
+	           </fieldset>
+	        </form>
+		</main>
+	<!--fin-->
+	    <footer>
+<p class="footer">Sitio creado por Alberta, todos los derechos reservados (?)</p>
+		</footer>
+	</div>
+</body>
+</html>

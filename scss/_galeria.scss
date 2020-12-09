@@ -1,0 +1,31 @@
+
+
+/* GALERIA */
+
+
+#galeriaBody {
+    margin: 0;
+    height: 100vh;
+}
+
+.section__article {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around; 
+    height: 560px;
+    align-items: center;
+} 
+
+.article__ilustration {
+    flex-basis: 400px;
+    align-items: baseline;
+    height:400px;
+    transition: height 0.5s;
+    &:hover {   
+        height:450px;
+    }
+}
+
+#digital {
+    display: block;
+}
